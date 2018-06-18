@@ -27,6 +27,7 @@ public class SearchActivity extends AppCompatActivity {
         textbox1 = (EditText)findViewById(R.id.editText);
         textbox2 = (EditText)findViewById(R.id.editText2);
 
+        //Search button
         Button searchButton = (Button)findViewById(R.id.button2);
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,8 +59,17 @@ public class SearchActivity extends AppCompatActivity {
                     }
                 }
 
-
             }
+        });
+
+        //Favorites button
+        Button favoritesButton = (Button)findViewById(R.id.button3);
+        favoritesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SearchActivity.this, FavoritesActivity.class));
+            }
+
         });
 
     }
